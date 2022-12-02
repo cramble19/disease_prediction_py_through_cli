@@ -84,9 +84,6 @@ def NaiveBayes():
     gnb=gnb.fit(X.values,np.ravel(y.values))
     from sklearn.metrics import accuracy_score
     y_pred = gnb.predict(X_test.values)
-    print(accuracy_score(y_test, y_pred))
-    print(accuracy_score(y_test, y_pred, normalize=False))
-
     psymptoms = sys.argv[1:]
     
     for k in range(0,len(l1)):
